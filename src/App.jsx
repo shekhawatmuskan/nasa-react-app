@@ -15,41 +15,60 @@ function App() {
   useEffect(() => {
     async function fetchAPIData() {
       const NASA_KEY = import.meta.env.VITE_NASA_API_KEY;
-      const url =
-        "https://api.nasa.gov/planetary/apod" + `?api_key=${NASA_KEY}`;
-
-      const today = new Date().toDateString();
-      const localKey = `NASA-${today}`;
-      if (localStorage.getItem(localKey)) {
-        const apiData = JSON.parse(localStorage.getItem(localKey));
-        setData(apiData);
-        console.log("Fetched from cache today ");
+      if (!NASA_KEY) {
+        console.error("NASA API key is missing. Check your .env file.");
         return;
       }
+
+      const url = `https://api.nasa.gov/planetary/apod?api_key=${NASA_KEY}`;
+      const today = new Date().toDateString();
+      const localKey = `NASA-${today}`;
+      const cachedData = localStorage.getItem(localKey);
+
+      if (cachedData) {
+        try {
+          const parsedData = JSON.parse(cachedData);
+          if (parsedData && parsedData.date === today) {
+            setData(parsedData);
+            console.log("Fetched from cache today");
+            return;
+          }
+        } catch (error) {
+          console.error("Invalid cached data, fetching new data...");
+        }
+      }
+
+      // Clear storage and fetch new data
       localStorage.clear();
 
       try {
+        setLoading(true);
         const res = await fetch(url);
+        if (!res.ok) {
+          throw new Error(`Error fetching API: ${res.statusText}`);
+        }
         const apiData = await res.json();
         localStorage.setItem(localKey, JSON.stringify(apiData));
         setData(apiData);
-        console.log("Fetched from API today ");
+        console.log("Fetched from API today");
       } catch (err) {
-        console.log(err.message);
+        console.error(err.message);
+      } finally {
+        setLoading(false);
       }
     }
+
     fetchAPIData();
   }, []);
 
   return (
     <>
-      {data ? (
-        <Main data={data} />
-      ) : (
+      {loading && (
         <div className="loadingState">
-          <i className="fa-solid fa-gear"></i>
+          <i className="fa-solid fa-gear"></i> Loading...
         </div>
       )}
+      {data && <Main data={data} />}
       {showModal && (
         <SideBar data={data} handleToggleModal={handleToggleModal} />
       )}
