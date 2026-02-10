@@ -1,12 +1,12 @@
 <div align="center">
 
-# 🌌 NASA APOD EXPLORER 🚀
+# <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=200&section=header&text=NASA%20APOD%20EXPLORER&fontSize=50&fontColor=fff&animation=twinkling&fontAlignY=35" width="100%"/>
+
 
 <img src="https://readme-typing-svg.herokuapp.com?font=Orbitron&size=35&duration=3000&pause=1000&color=00D9FF&center=true&vCenter=true&width=600&lines=Explore+The+Cosmos;Astronomy+Picture+of+the+Day;Powered+by+NASA+API" alt="Typing SVG" />
+  
 
-<br/>
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=200&section=header&text=NASA%20APOD%20EXPLORER&fontSize=50&fontColor=fff&animation=twinkling&fontAlignY=35" width="100%"/>
 
 <br/>
 
@@ -18,14 +18,11 @@
 
 <br/>
 
-### 🌠 _Journey through space, one image at a time_ 🌠
-
-<br/>
-
 <p align="center">
   <a href="#-features">Features</a> •
-  <a href="#-demo">Demo</a> •
-  <a href="#-installation">Installation</a>
+  <a href="#-installation">Installation</a> •
+  <a href="#-component-architecture">Component Architecture</a> 
+  
 </p>
 
 <br/>
@@ -249,7 +246,7 @@ nasa-apod-explorer/
 git clone https://github.com/shekhawatmuskan/nasa-react-app.git
 
 # SSH
-git clone git@github.com:shekhawatmuskan/nasa-react-appr.git
+git clone git@github.com:shekhawatmuskan/nasa-react-app.git
 
 # GitHub CLI
 gh repo clone shekhawatmuskan/nasa-react-app
