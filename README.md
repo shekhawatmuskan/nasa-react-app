@@ -63,8 +63,9 @@ To bring the wonders of the universe to your fingertips through a beautiful, mod
 
 ### 📸 Project Overview
 
-<!-- Replace with your actual screenshot -->
 <img src="./src/assets/Screenshot.png" alt="NASA APOD Explorer Screenshot" width="80%"/>
+
+<img src="./src/assets/menu.png" alt="Navigation Menu" width="80%"/>
 
 </div>
 
@@ -189,15 +190,18 @@ nasa-apod-explorer/
 ├── src/
 │   ├── assets/
 │   │   ├── react.svg
-│   │   └── Screenshot.png
+│   │   ├── Screenshot.png
+│   │   └── menu.png
 │   ├── components/
 │   │   ├── App.jsx
 │   │   ├── Footer.jsx
 │   │   ├── Main.jsx
-│   │   └── SideBar.jsx
+│   │   ├── SideBar.jsx
+│   │   ├── NavigationSidebar.jsx
+│   │   └── Gallery.jsx
 │   ├── index.css
 │   └── main.jsx
-├── .env
+├── .env                     # Environment variables (NASA API key)
 ├── .gitignore
 ├── index.html
 ├── package.json
@@ -366,16 +370,22 @@ graph TD
     A[App.jsx] --> B[Main.jsx]
     A --> C[SideBar.jsx]
     A --> D[Footer.jsx]
+    A --> E[NavigationSidebar.jsx]
+    A --> F[Gallery.jsx]
 
-    B --> E[Image Display]
-    C --> F[Title & Date]
-    C --> G[Description]
-    D --> H[Navigation]
+    B --> G[Image Display]
+    C --> H[Title & Date]
+    C --> I[Description]
+    D --> J[Navigation]
+    E --> K[Menu Options]
+    F --> L[All Pictures with Descriptions]
 
     style A fill:#667eea,stroke:#764ba2,stroke-width:3px,color:#fff
     style B fill:#f093fb,stroke:#f5576c,stroke-width:2px
     style C fill:#4facfe,stroke:#00f2fe,stroke-width:2px
     style D fill:#43e97b,stroke:#38f9d7,stroke-width:2px
+    style E fill:#fa709a,stroke:#fee140,stroke-width:2px
+    style F fill:#30cfd0,stroke:#330867,stroke-width:2px
 ```
 
 <br/>
@@ -437,9 +447,43 @@ graph TD
 
 </td>
 </tr>
+<tr>
+<td align="center" width="25%">
+
+<img src="https://img.icons8.com/color/96/000000/menu-2.png" width="50"/>
+
+**NavigationSidebar.jsx**
+
+📋 Navigation Menu
+
+- Access to all pictures stored by NASA
+- Browse images with their descriptions
+- Menu toggle functionality
+
+</td>
+<td align="center" width="25%">
+
+<img src="https://img.icons8.com/color/96/000000/gallery.png" width="50"/>
+
+**Gallery.jsx**
+
+🖼️ Gallery View
+
+- Displays all pictures from NASA
+- Shows images with their descriptions
+- Grid layout for easy browsing
+
+</td>
+</tr>
 </table>
 
 </div>
+
+<br/>
+
+![Divider](https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif)
+
+<br/>
 
 <br/>
 
