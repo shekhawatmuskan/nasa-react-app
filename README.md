@@ -2,10 +2,7 @@
 
 # <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=200&section=header&text=NASA%20APOD%20EXPLORER&fontSize=50&fontColor=fff&animation=twinkling&fontAlignY=35" width="100%"/>
 
-
 <img src="https://readme-typing-svg.herokuapp.com?font=Orbitron&size=35&duration=3000&pause=1000&color=00D9FF&center=true&vCenter=true&width=600&lines=Explore+The+Cosmos;Astronomy+Picture+of+the+Day;Powered+by+NASA+API" alt="Typing SVG" />
-  
-
 
 
 <br/>
@@ -60,8 +57,10 @@ To bring the wonders of the universe to your fingertips through a beautiful, mod
 
 ### 📸 Project Overview
 
+<p> Everyday Image with Description </p>
 <img src="./src/assets/Screenshot.png" alt="NASA APOD Explorer Screenshot" width="80%"/>
 
+<p> All Pictures </p>
 <img src="./src/assets/menu.png" alt="Navigation Menu" width="80%"/>
 
 </div>
@@ -391,7 +390,7 @@ graph TD
 
 <table>
 <tr>
-<td align="center" width="25%">
+<td align="center" width="33%" valign="top" style="background-color:#0b1220; padding:18px; border-radius:12px;">
 
 <img src="https://img.icons8.com/color/96/000000/module.png" width="50"/>
 
@@ -404,7 +403,7 @@ graph TD
 - Data Flow Control
 
 </td>
-<td align="center" width="25%">
+<td align="center" width="33%" valign="top" style="background-color:#0b1220; padding:18px; border-radius:12px;">
 
 <img src="https://img.icons8.com/color/96/000000/image.png" width="50"/>
 
@@ -417,7 +416,7 @@ graph TD
 - Visual Effects
 
 </td>
-<td align="center" width="25%">
+<td align="center" width="33%" valign="top" style="background-color:#0b1220; padding:18px; border-radius:12px;">
 
 <img src="https://img.icons8.com/color/96/000000/menu.png" width="50"/>
 
@@ -430,7 +429,9 @@ graph TD
 - Description Text
 
 </td>
-<td align="center" width="25%">
+</tr>
+<tr>
+<td align="center" width="33%" valign="top" style="background-color:#0b1220; padding:18px; border-radius:12px;">
 
 <img src="https://img.icons8.com/color/96/000000/footer.png" width="50"/>
 
@@ -443,9 +444,7 @@ graph TD
 - Links
 
 </td>
-</tr>
-<tr>
-<td align="center" width="25%">
+<td align="center" width="33%" valign="top" style="background-color:#0b1220; padding:18px; border-radius:12px;">
 
 <img src="https://img.icons8.com/color/96/000000/menu-2.png" width="50"/>
 
@@ -458,7 +457,7 @@ graph TD
 - Menu toggle functionality
 
 </td>
-<td align="center" width="25%">
+<td align="center" width="33%" valign="top" style="background-color:#0b1220; padding:18px; border-radius:12px;">
 
 <img src="https://img.icons8.com/color/96/000000/gallery.png" width="50"/>
 
